@@ -101,7 +101,7 @@
       border-radius: 5px; /* 角丸 */
       margin-right: 10px; /* タイトルとの間隔 */
       cursor: pointer; /* カーソルをポインタに変更 */
-      position: fixed;
+      position: absolute;
       top: 10px;
       left: 10px;
     }
@@ -133,7 +133,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      text-align: center;
+      text-align: left; /* 左寄せ */
     }
 
     .menu-bar li {
@@ -145,6 +145,8 @@
     .menu-bar li a {
       text-decoration: none;
       color: white;
+      display: block; /* 項目が1行に収まるように */
+      padding: 10px; /* 余白を追加 */
     }
 
     .close-button {
@@ -184,10 +186,10 @@
     <p>ようこそ我々のサイトへ！</p> 
   </div>
 
-  <p>更新内容</p>  <!-- 空白の文章を追加 -->
+  <p>空白</p>  <!-- 空白の文章を追加 -->
 
   <div class="comment-area">
-    <p>ボタンに影の効果を追加して立体感を実現しました。ページの左上にメニューバーを作成し、メニューバーを展開できるようにしました。</p>
+    <p>エラー#112　エラー#291</p>
   </div>
 
   <div class="slider">
@@ -196,15 +198,15 @@
 
   <div class="menu-bar">
     <ul>
-      <li><a href="#">ホーム</a></li>
-      <li><a href="#">他のサイト</a></li>
+      <li><a href="https://ccrroo.github.io/1" target="_blank">ホーム</a></li>  <!-- リンクを追加 -->
+      <li><a href="https://ccrroo.github.io/2" target="_blank">エロい</a></li>  <!-- リンクを追加 -->
     </ul>
     <div class="close-button">×</div>
   </div>
 
   <script>
     document.getElementById('test-button').addEventListener('click', function() {
-      document.getElementById('message-area').querySelector('p').textContent = '函館高専のテスト対策資料の何かを表示するスペース';
+      document.getElementById('message-area').querySelector('p').textContent = 'テスト期間まで更新なし';
       const audio = new Audio('https://soundeffect-lab.info/sound/button/mp3/decision3.mp3');
       audio.play();
     });
